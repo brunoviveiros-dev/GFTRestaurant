@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Services", "1 - Services", "{F98F3D58-8A94-46EE-A2FF-90A43DE303A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{D443DACE-DFDA-43A0-84EA-D518FB8F3166}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - Infrastructure", "{3B9FB98A-795B-4438-ADB2-A649E06A84C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{83E5621D-32DD-4065-ACE5-EC52C553F68F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{93CF160E-9B63-4852-924E-800B61594C61}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GFTRestaurant.App", "GFTRestaurant.App\GFTRestaurant.App.csproj", "{3F0740AD-5147-412B-BE8A-B8D31C92E02A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GFTRestaurant.Tests", "GFTRestaurant.Tests\GFTRestaurant.Tests.csproj", "{5773B78A-9258-42CF-926B-1EE9162F5883}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GFTRestaurant.Domain", "GFTRestaurant.Domain\GFTRestaurant.Domain.csproj", "{C92642BD-1293-4D42-929E-1FBF44959B18}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GFTRestaurant.API", "GFTRestaurant.API\GFTRestaurant.API.csproj", "{DABC0DDA-D420-4EC5-9843-E67910EC996E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GFTRestaurant.Infrastructure", "GFTRestaurant.Infrastructure\GFTRestaurant.Infrastructure.csproj", "{618D1D4C-431F-4995-A10A-15C96113739C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F0740AD-5147-412B-BE8A-B8D31C92E02A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F0740AD-5147-412B-BE8A-B8D31C92E02A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F0740AD-5147-412B-BE8A-B8D31C92E02A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F0740AD-5147-412B-BE8A-B8D31C92E02A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5773B78A-9258-42CF-926B-1EE9162F5883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5773B78A-9258-42CF-926B-1EE9162F5883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5773B78A-9258-42CF-926B-1EE9162F5883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5773B78A-9258-42CF-926B-1EE9162F5883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C92642BD-1293-4D42-929E-1FBF44959B18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C92642BD-1293-4D42-929E-1FBF44959B18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C92642BD-1293-4D42-929E-1FBF44959B18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C92642BD-1293-4D42-929E-1FBF44959B18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DABC0DDA-D420-4EC5-9843-E67910EC996E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DABC0DDA-D420-4EC5-9843-E67910EC996E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DABC0DDA-D420-4EC5-9843-E67910EC996E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DABC0DDA-D420-4EC5-9843-E67910EC996E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{618D1D4C-431F-4995-A10A-15C96113739C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{618D1D4C-431F-4995-A10A-15C96113739C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{618D1D4C-431F-4995-A10A-15C96113739C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{618D1D4C-431F-4995-A10A-15C96113739C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3F0740AD-5147-412B-BE8A-B8D31C92E02A} = {93CF160E-9B63-4852-924E-800B61594C61}
+		{5773B78A-9258-42CF-926B-1EE9162F5883} = {83E5621D-32DD-4065-ACE5-EC52C553F68F}
+		{C92642BD-1293-4D42-929E-1FBF44959B18} = {D443DACE-DFDA-43A0-84EA-D518FB8F3166}
+		{DABC0DDA-D420-4EC5-9843-E67910EC996E} = {F98F3D58-8A94-46EE-A2FF-90A43DE303A7}
+		{618D1D4C-431F-4995-A10A-15C96113739C} = {3B9FB98A-795B-4438-ADB2-A649E06A84C6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {802889BF-0A5B-4F5B-9069-24B25110778E}
+	EndGlobalSection
+EndGlobal
