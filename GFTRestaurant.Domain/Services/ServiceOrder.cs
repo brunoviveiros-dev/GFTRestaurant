@@ -1,5 +1,6 @@
-﻿using GFTRestaurant.Domain.Entitys;
+﻿using GFTRestaurant.Domain.Entities;
 using GFTRestaurant.Domain.Enumerators;
+using GFTRestaurant.Domain.Interfaces;
 using GFTRestaurant.Domain.Interfaces.Services;
 using System;
 using System.Collections.Generic;
@@ -9,37 +10,39 @@ namespace GFTRestaurant.Domain.Services
 {
     public class ServiceOrder : IServiceOrder
     {
-        public ServiceOrder()
-        {
+        private readonly IOrderRepository _orderRepository;
 
+        public ServiceOrder(IOrderRepository orderRepository)
+        {
+            this._orderRepository = orderRepository;
         }
 
         public void Add(Order obj)
         {
-            throw new System.NotImplementedException();
+            _orderRepository.Add(obj);
         }
 
         public void Delete(Order obj)
         {
-            throw new System.NotImplementedException();
+            _orderRepository.Delete(obj);
         }
 
         public IEnumerable<Order> GetAll()
         {
-            throw new System.NotImplementedException();
+            return _orderRepository.GetAll();
         }
 
         public Order GetById(long id)
         {
-            throw new System.NotImplementedException();
+            return _orderRepository.GetById(id);
         }
 
         public void Update(Order obj)
         {
-            throw new System.NotImplementedException();
+            _orderRepository.Update(obj);
         }
 
-        public string PlaceAnOrder(string orderInput)
+        public Order CreateAnOrder(string orderInput)
         {
             try
             {
@@ -102,13 +105,11 @@ namespace GFTRestaurant.Domain.Services
                         break;
                 }
 
-                foreach (var dish in dishesList.OrderBy(o => o.Key))
+                foreach (var dish in dishesList.OrderBy(x => x.Key))
                     orderOutput += $"{dish.Value},";
 
                 orderOutput = orderOutput.Remove(orderOutput.Length - 1);
-                //_databaseContext.Add(new Order() { Detail = orderOutput });
-
-                return orderOutput;
+                return new Order() { Detail = orderOutput };
             }
             catch (Exception ex)
             {

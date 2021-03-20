@@ -1,9 +1,9 @@
-﻿using GFTRestaurant.Domain.Entitys;
+﻿using GFTRestaurant.Domain.Entities;
 
 namespace GFTRestaurant.Domain.Interfaces.Services
 {
-    public interface IServiceOrder : IBaseRepository<Order>
+    public interface IServiceOrder : IServiceBase<Order>
     {
-        string PlaceAnOrder(string orderInput);
+        Order CreateAnOrder(string orderInput);
     }
 }

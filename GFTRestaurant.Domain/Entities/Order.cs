@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace GFTRestaurant.Domain.Entitys
+namespace GFTRestaurant.Domain.Entities
 {
     [Table("Order")]
     public class Order

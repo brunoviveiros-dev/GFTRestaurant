@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GFTRestaurant.App\GFTRestaurant.App.csproj" />
     <ProjectReference Include="..\GFTRestaurant.Domain\GFTRestaurant.Domain.csproj" />
     <ProjectReference Include="..\GFTRestaurant.Infrastructure\GFTRestaurant.Infrastructure.csproj" />
   </ItemGroup>

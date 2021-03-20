@@ -14,6 +14,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{93CF160E-9B63-4852-924E-800B61594C61}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GFTRestaurant.App", "GFTRestaurant.App\GFTRestaurant.App.csproj", "{3F0740AD-5147-412B-BE8A-B8D31C92E02A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C92642BD-1293-4D42-929E-1FBF44959B18} = {C92642BD-1293-4D42-929E-1FBF44959B18}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GFTRestaurant.Tests", "GFTRestaurant.Tests\GFTRestaurant.Tests.csproj", "{5773B78A-9258-42CF-926B-1EE9162F5883}"
 EndProject
