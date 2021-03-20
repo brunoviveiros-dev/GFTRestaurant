@@ -24,7 +24,7 @@ namespace GFTRestaurant.API
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        private IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -36,7 +36,7 @@ namespace GFTRestaurant.API
             });
             
             services.AddMvc();
-            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DBConnectionString")));
+            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
             services.AddScoped<IAppServiceOrder, AppServiceOrder>();
             services.AddScoped<IServiceOrder, ServiceOrder>();
             services.AddScoped<IOrderRepository, OrderRepository>();
