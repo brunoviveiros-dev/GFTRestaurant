@@ -8,6 +8,7 @@ namespace GFTRestaurant.Domain.Interfaces
         void Add(T obj);
         void Update(T obj);
         void Delete(T obj);
+        void DeleteAll();
         IEnumerable<T> GetAll();
         T GetById(Int64 id);
     }

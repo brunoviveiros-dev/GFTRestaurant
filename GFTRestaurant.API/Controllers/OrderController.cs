@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace GFTRestaurant.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class OrderController : ControllerBase
     {
         private readonly IAppServiceOrder _appServiceOrder;
@@ -19,7 +19,7 @@ namespace GFTRestaurant.API.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<OrderDto> Get()
+        public IEnumerable<OrderDtoResponse> Get()
         {
             try
             {
@@ -31,8 +31,22 @@ namespace GFTRestaurant.API.Controllers
             }
         }
 
+        [HttpDelete]
+        public IActionResult DeleteAll()
+        {
+            try
+            {
+                _appServiceOrder.DeleteAll();
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         [HttpPost]
-        public ActionResult<OrderDto> Post([FromBody] OrderDto order)
+        public ActionResult<OrderDtoResponse> Post([FromBody] OrderDtoRequest order)
         {
             try
             {
@@ -46,9 +60,9 @@ namespace GFTRestaurant.API.Controllers
                     throw new ArgumentException("Unknown dish type.");
 
                 var newOrder = _appServiceOrder.CreateAnOrder(order.Detail);
-                _appServiceOrder.Add(newOrder);
+                var orderDto = _appServiceOrder.Add(newOrder);
 
-                return newOrder;
+                return orderDto;
             }
             catch (Exception ex)
             {

@@ -8,20 +8,21 @@ namespace GFTRestaurant.App.Mappers
     {
         public MappingProfile()
         {
-            OrderDtoToOrderMap();
-            OrderToOrderDtoMap();
+            OrderDtoResponseToOrderMap();
+            OrderToOrderDtoResponseMap();
         }
 
-        private void OrderDtoToOrderMap()
+        private void OrderDtoResponseToOrderMap()
         {
-            CreateMap<OrderDto, Order>()
+            CreateMap<OrderDtoResponse, Order>()
                 .ForMember(dest => dest.Id, opt => opt.Ignore())
                 .ForMember(dest => dest.Detail, opt => opt.MapFrom(x => x.Detail));
         }
 
-        private void OrderToOrderDtoMap()
+        private void OrderToOrderDtoResponseMap()
         {
-            CreateMap<Order, OrderDto>()
+            CreateMap<Order, OrderDtoResponse>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(x => x.Id))
                 .ForMember(dest => dest.Detail, opt => opt.MapFrom(x => x.Detail));
         }
     }

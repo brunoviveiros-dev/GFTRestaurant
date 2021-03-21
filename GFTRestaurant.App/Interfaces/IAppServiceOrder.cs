@@ -2,8 +2,8 @@
 
 namespace GFTRestaurant.App.Interfaces
 {
-    public interface IAppServiceOrder : IAppServiceBase<OrderDto>
+    public interface IAppServiceOrder : IAppServiceBase<OrderDtoResponse>
     {
-        OrderDto CreateAnOrder(string orderInput);
+        OrderDtoResponse CreateAnOrder(string orderInput);
     }
 }

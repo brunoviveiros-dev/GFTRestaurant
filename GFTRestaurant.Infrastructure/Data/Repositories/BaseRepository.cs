@@ -1,4 +1,5 @@
 ﻿using GFTRestaurant.Domain.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,11 @@ namespace GFTRestaurant.Infrastructure.Data.Repositories
         public void Delete(T obj)
         {
             _databaseContext.Set<T>().Remove(obj);
+        }
+
+        public void DeleteAll()
+        {
+            _databaseContext.Database.ExecuteSqlRaw("TRUNCATE TABLE dbo.[Order]");
         }
 
         public IEnumerable<T> GetAll()

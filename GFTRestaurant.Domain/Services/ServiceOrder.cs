@@ -17,14 +17,20 @@ namespace GFTRestaurant.Domain.Services
             this._orderRepository = orderRepository;
         }
 
-        public void Add(Order obj)
+        public Order Add(Order obj)
         {
             _orderRepository.Add(obj);
+            return new Order() { Id = obj.Id, Detail = obj.Detail };
         }
 
         public void Delete(Order obj)
         {
             _orderRepository.Delete(obj);
+        }
+
+        public void DeleteAll()
+        {
+            _orderRepository.DeleteAll();
         }
 
         public IEnumerable<Order> GetAll()
